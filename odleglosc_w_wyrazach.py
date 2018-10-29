@@ -1,13 +1,17 @@
 import string
-ile_wyrazow = int(input("Podaj ilosc wyrazow: "))
+
 wyrazy = []
 alpha = list(string.ascii_uppercase)
-print(alpha)
-print(len(alpha))
 list_of_word_indexes = []
+ile_wyrazow = int(input("Podaj ilosc wyrazow: "))
+#print(alpha)
+#print(len(alpha))
 for i in range(ile_wyrazow):
     temp_wyraz = input("Podaj wyraz: ")
-    wyrazy.append(temp_wyraz.upper())
+    if len(temp_wyraz)>=2 and len(temp_wyraz)<= 1000:
+        wyrazy.append(temp_wyraz.upper())
+    else:
+        continue
 
 
 for word in wyrazy:
